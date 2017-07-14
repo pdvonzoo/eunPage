@@ -1,0 +1,132 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* RESET CSS , a 태그에 'text-decoration = none' 추가. */
+body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    position: absolute;
+    width: 100%;
+    height: 77px;
+    background-color: #00BCD4;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    z-index: 2;
+}
+header .top{
+    padding: 25px 20px 23px;
+    display: flex;
+
+}
+header .top h1{
+    flex: 1;
+    text-align: center;
+    display: inline;
+    font-size: 36px;
+}
+header .top h1 a{
+	color: #fff;
+}
+header .top .git, .hamburger{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+/* HEADER 영역 */
+
+.side-menu{
+    top: 0;
+    left: -200px;
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    background-color: #61B3BA;
+	box-shadow: 2px 0px 5px rgba(0, 0, 0, .26);
+    z-index: 1;
+	transition: all 0.3s;
+}
+.side-menu .menu{
+	width: 100%;
+    padding-top: 77px;
+}
+.side-menu .menu li{
+	width: 100%;
+    height: 100px;
+}
+.side-menu .menu li a{
+	position: absolute;
+	text-align: center;
+	padding-right: 10px;
+	width: 100%;
+    font-size: 24px;
+	color: #fff;
+	line-height: 100px;
+}
+/* NAVIGATION 영역*/
+
+main{
+	padding: 200px 100px 0;
+}
+main h2 {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eeeeee;
+	font-size: 24px;
+
+}
+main p{
+	padding-top: 70px;
+}
+
+/* MENU 영역 */

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>eunchae</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="../public/container.css">
+    <script src="../javascript/jquery.js"></script>
+  </head>
+  <body>
+      <header>
+          <div class="top">
+              <span class="hamburger" id="hamburger"><img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQZXJxTnVfWmQzdUk
+" alt=""></span>
+              <h1><a href="/">eunchae</a></h1>
+              <span class="git" OnClick="location.href='https://bitbucket.org/account/user/vonzoo/'"><img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQekdqWGVZd3pJWTA
+" alt=""></span>
+          </div>
+      </header>
+      <nav class="side-menu" id="side-menu">
+          <ul class='menu'>
+              <li><a href="/memo">memo</a>
+              </li>
+              <li><a href="/picture">picture</a>
+              </li>
+              <li><a href="/video">video</a>
+              </li>
+          </ul>
+      </nav>
+
+        <main>
+            <h2>memo</h2>
+        </main>
+        <section class="memoapp">
+            <div class="header">
+            <input class="new-memo" placeholder="Write it down." autofocus>
+            </div>
+            <div class="main">
+                <ul class="memo-list"></ul>
+            </div>
+        </section>
+
+        <script type="text/template" id="item-template">
+            <li{{#if completed}} class="completed"{{/if}}>
+                <div class="view">
+                    <input class="toggle" type="checkbox" value="{{id}}" {{#if completed}} checked{{/if}}>
+                    <label>{{title}}</label>
+                    <button class="destroy" data-id="{{id}}"></button>
+                </div>
+                <input class="edit" value="">
+            </li>
+        </script>
+        <script>
+        var open=false;
+        function createSideMenu() {
+            if(open === false) {
+                open = true;
+                $id('side-menu').style.left = "0";
+            } else {
+                open = false;
+                $id('side-menu').style.left = "-200px";
+            }
+        }
+        $on('click', $id('hamburger'), createSideMenu);
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+        <script src="../javascript/memo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="initial-scale=1.0, width=device-width">
+            <title>eunchae</title>
+            <link rel="stylesheet" href="../public/style.css">
+            <link rel="stylesheet" href="../public/container.css">
+            <script src="../javascript/jquery.js"></script>
+        </head>
+
+        <body>
+            <header>
+                <div class="top">
+                    <span class="hamburger" id="hamburger"><img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQZXJxTnVfWmQzdUk
+" alt=""></span>
+                    <h1><a href="/">eunchae</a></h1>
+                    <span class="git" OnClick="location.href='https://bitbucket.org/account/user/vonzoo/'"><img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQekdqWGVZd3pJWTA
+" alt=""></span>
+                </div>
+            </header>
+            <nav class="side-menu" id="side-menu">
+                <ul class='menu'>
+                    <li><a href="/about">about</a>
+                    </li>
+                    <li><a href="/picture">picture</a>
+                    </li>
+                    <li><a href="/video">video</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main>
+                <h2>Video</h2>
+                <section>
+                    <div class="wrapper">
+                        <div class="description">
+                            <h3>content</h3>
+                        </div>
+                        <div class="content">
+                            <video class="video" preload="auto" autoplay="true" loop="loop" controls="true" muted="muted" >
+                                <source src="https://drive.google.com/open?id=0B1myX2Ur2lOQeUhuX3RMRklxdEE">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="description">
+                            <h3>content</h3>
+                        </div>
+                        <div class="content">
+                            <video class="video" preload="auto" autoplay="true" loop="loop" controls="true" muted="muted" >
+                                <source src="https://drive.google.com/open?id=0B1myX2Ur2lOQazhVb21SdGw0SDQ">
+                            </video>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <script>
+            var open=false;
+            var boxOpen=false;
+
+            function createSideMenu() {
+
+                if(open === false) {
+                    open = true;
+                    $id('side-menu').style.left = "0";
+
+                } else {
+                    open = false;
+                    $id('side-menu').style.left = "-200px";
+                }
+            }
+
+            $on('click', $id('hamburger'), createSideMenu);
+
+
+            </script>
+
+        </body>
+
+    </html>

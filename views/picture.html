@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="initial-scale=1.0, width=device-width">
+            <title>eunchae</title>
+            <link rel="stylesheet" href="../public/style.css">
+            <link rel="stylesheet" href="../public/container.css">
+            <script src="../javascript/jquery.js"></script>
+
+        </head>
+
+        <body>
+            <header>
+                <div class="top">
+                    <span class="hamburger" id="hamburger"><img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQZXJxTnVfWmQzdUk
+" alt=""></span>
+                    <h1><a href="/">eunchae</a></h1>
+                    <span class="git" OnClick="location.href='https://bitbucket.org/account/user/vonzoo/'"><img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQekdqWGVZd3pJWTA
+" alt=""></span>
+                </div>
+            </header>
+            <nav class="side-menu" id="side-menu">
+                <ul class='menu'>
+                    <li><a href="/about">about</a>
+                    </li>
+                    <li><a href="/picture">picture</a>
+                    </li>
+                    <li><a href="/video">video</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main>
+                <h2>Picture</h2>
+
+
+                <section>
+                    <div class="wrapper">
+                        <figure class="content">
+                            <img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQbjdQR0tCWDVzME0" alt="">
+                            <figcaption>
+                                <h4>첫번째 사진</h4>
+                                <p>2017.03</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="wrapper">
+                        <figure class="content">
+                            <img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQUkl3dzhOQ01JWEk" alt="">
+                            <figcaption>
+                                <h4>두번째 사진</h4>
+                                <p>2017.05</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="wrapper">
+                        <figure class="content">
+                            <img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQeXI4RG9Obk9mWXM" alt="">
+                            <figcaption>
+                                <h4>세번째 사진</h4>
+                                <p>2017.05</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="wrapper">
+                        <figure class="content">
+                            <img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQcXU2aWJ3UHBZZW8" alt="">
+                            <figcaption>
+                                <h4>네번째 사진</h4>
+                                <p>2017.06</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="wrapper">
+                        <figure class="content">
+                            <img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQRks0a2lYdFAtU2s" alt="">
+                            <figcaption>
+                                <h4>다섯번째 사진</h4>
+                                <p>2017.07.11</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="wrapper">
+                        <figure class="content">
+                            <img src="http://drive.google.com/uc?export=view&id=0B1myX2Ur2lOQdTJOa1RYSVhnNFU" alt="">
+                            <figcaption>
+                                <h4>여섯번째 사진</h4>
+                                <p>2017.07.11</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                </section>
+
+
+
+            </main>
+            <script>
+                var open=false;
+
+                function createSideMenu() {
+
+                    if(open === false) {
+                        open = true;
+                        $id('side-menu').style.left = "0";
+
+                    } else {
+                        open = false;
+                        $id('side-menu').style.left = "-200px";
+                    }
+                }
+
+                $on('click', $id('hamburger'), createSideMenu);
+
+            </script>
+
+        </body>
+
+    </html>
