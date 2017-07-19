@@ -130,3 +130,278 @@ main p{
 }
 
 /* MENU 영역 */
+
+/*container*/
+section{
+    margin: 70px auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+section .wrapper{
+    width: 100%;
+    display: block;
+    height: 600px;
+
+}
+section .wrapper .description{
+    border: 1px solid #eeeeee;
+    line-height: 77px;
+    padding: 0 20px;
+    display: flex;
+    background-color: #eeeeee;
+}
+section .wrapper .description h3{
+    flex:1;
+    text-align: left;
+}
+section .wrapper .content{
+
+    border: 1px solid #eeeeee;
+    height: 400px;
+}
+
+section .wrapper .content video{
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+section .wrapper figure  {
+    margin-bottom: 100px;
+    width: 750.22px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+}
+section .wrapper figure  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+section .wrapper figure  img {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    vertical-align: top;
+}
+section .wrapper figure :after,
+section .wrapper figure  figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+section .wrapper figure :after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+}
+section .wrapper figure  figcaption {
+    z-index: 1;
+    padding: 40px;
+}
+section .wrapper figure  h4{
+    width: 100%;
+    margin: 5px 0;
+    padding: 0;
+    line-height: 1.1em;
+    font-weight: 700;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    opacity: 0;
+}
+section .wrapper figure  p {
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0;
+    top: 50%;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+}
+section .wrapper figure :hover:after {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+section .wrapper figure :hover h4,
+section .wrapper figure :hover p{
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+/* MEMO */
+button,
+input[type="checkbox"] {
+	outline: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.memoapp {
+	width: 80%;
+	margin: 30px auto;
+	border: 1px solid #eeeeee;
+	position: relative;
+}
+
+
+.new-memo,
+.edit {
+	font-size: 13px;
+	position: relative;
+	margin: 0;
+	width: 100%;
+	border: 0;
+	outline: none;
+	padding: 6px;
+	border: 1px solid #999;
+	box-sizing: border-box;
+}
+
+.new-memo {
+	padding: 16px 16px 16px 60px;
+	border: none;
+	border-bottom: 1px solid #eeeeee;
+	background: rgba(0, 0, 0, 0.003);
+}
+
+.memo-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.memo-list li {
+	position: relative;
+	font-size: 14px;
+	border-bottom: 1px solid #ededed;
+}
+
+.memo-list li:last-child {
+	border-bottom: none;
+}
+
+.memo-list li.editing {
+	border-bottom: none;
+	padding: 0;
+}
+
+.memo-list li.editing .edit {
+	display: block;
+	width: 506px;
+	padding: 13px 17px 12px 17px;
+	margin: 0 0 0 43px;
+}
+
+.memo-list li.editing .view {
+	display: none;
+}
+
+.memo-list li .toggle {
+	text-align: center;
+	width: 40px;
+	/* auto, since non-WebKit browsers doesn't support input styling */
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto 0;
+	border: none; /* Mobile Safari */
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.memo-list li .toggle:after {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+}
+
+.memo-list li .toggle:checked:after {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+
+.memo-list li label {
+	white-space: pre-line;
+	word-break: break-all;
+	padding: 15px 60px 15px 15px;
+	margin-left: 45px;
+	display: block;
+	line-height: 1.2;
+	transition: color 0.4s;
+	text-align: left;
+}
+
+.memo-list li.completed label {
+	color: #d9d9d9;
+	text-decoration: line-through;
+}
+
+.memo-list li .destroy {
+	display: none;
+	position: absolute;
+	top: 0;
+	border: 0;
+	right: 70px;
+	bottom: 0px;
+	width: 40px;
+	height: 40px;
+	margin: auto 0;
+	font-size: 27px;
+	color: #BBBBBB;
+	background-color: white;
+	margin-bottom: 4px;
+	transition: color 0.2s ease-out;
+}
+
+.memo-list li .destroy:hover {
+	color: #af5b5e;
+}
+
+.memo-list li .destroy:after {
+	content: 'remove';
+}
+
+.memo-list li:hover .destroy {
+	display: block;
+}
+
+.memo-list li .edit {
+	display: none;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.toggle-all,
+	.memo-list li .toggle {
+		background: none;
+	}
+
+	.memo-list li .toggle {
+		height: 40px;
+	}
+
+	.toggle-all {
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+		-webkit-appearance: none;
+		appearance: none;
+	}
+}
